@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Calmind</title>
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <!-- Font Google -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    .section {
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background-color: red;
+    }
+
+    .sticky-container {
+      position: sticky;
+      background-color: blue;
+      top: 0;
+      height: 40vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .scene {
+      width: 700px;
+      background-color: rgb(211, 12, 218);
+      height: 700px;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hormonios-text {
+      height: 300px;
+      width: 400px;
+      margin: 100px 100px 0px 150px;
+      text-align: center;
+      display: inline-block;
+    }
+
+
+    .hormonios-text:first-child {
+      margin-right: 250px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container"> <a class="navbar-brand navbar-logo" href="#"> <img src="images/logo.png" alt="logo"
+          class="logo-1"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+          class="fas fa-bars"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"> <a class="nav-link" href="" data-scroll-nav="0">Home</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="1">Vício</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="2">Hormônios</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="3">Nosso App</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4">Download</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+  <!-------Banner Start------->
+  <section class="banner" data-scroll-index='0'>
+    <div class="banner-overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-12">
+            <div class="banner-text">
+              <h2 class="white">Conheça o app Calmind</h2>
+              <h6 class="white">Recupere seu Foco e Produtividade</h6>
+              <p class="banner-text white">Desafios, recompensas e suporte para te ajudar a reduzir o vício em dopamina
+                e aproveitar mais a vida real. Baixe agora e comece sua transformação!</p>
+              <ul>
+                <li><a href="#"><img src="images/playstore.png" class="wow fadeInUp" data-wow-delay="0.7s" /></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12"> <img src="images/celular-app.png"
+              class="img-fluid wow fadeInUp" /> </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-------Banner End------->
+
+  <!-------About End------->
+
+  <section class="about section-padding prelative" data-scroll-index='1'>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center">
+            <h3>Vício</h3>
+            <span class="line"></span>
+            <p>Você ja parou pra pensar o porque as redes sociais são viciantes e te prendem tanto? Entenda agora os
+              responsáveis por esse vício e como eles agem em nosso corpo!</p>
+          </div>
+          <div class="section-content text-center">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.2s"> <i class="fa fa-life-ring"
+                    aria-hidden="true"></i>
+                  <h5>Sistema de Recompensa e Dopamina
+                  </h5>
+                  <p>Toda vez que você recebe uma curtida ou mensagem, seu cérebro libera dopamina, o que gera uma
+                    sensação de prazer e bem-estar. Isso cria um ciclo de repetição: você volta para o app em busca
+                    dessa sensação novamente.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.4s"> <i class="fa fa-mobile"
+                    aria-hidden="true"></i>
+                  <h5>Scroll Infinito e Conteúdo Ilimitado</h5>
+                  <p>O feed das redes sociais nunca acaba. Isso faz com que a pessoa continue rolando a tela sem
+                    perceber o tempo passar, sempre esperando encontrar algo novo e interessante.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.6s"> <i class="fa fa-bolt" aria-hidden="true"></i>
+                  <h5>Prova Social</h5>
+                  <p>Quando vemos muitas pessoas curtindo, compartilhando ou comentando algo, tendemos a acreditar que
+                    aquilo é importante e merece nossa atenção. Isso nos faz continuar rolando o feed e interagindo para
+                    nos sentirmos parte do grupo.</p>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="about-btn">Saiba Mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-------About End------->
+
+
+  <section class="about section-padding prelative" data-scroll-index='2'>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center">
+            <h3>Vício</h3>
+            <span class="line"></span>
+            <p>Você ja parou pra pensar o porque as redes sociais são viciantes e te prendem tanto? Entenda agora os
+              responsáveis por esse vício e como eles agem em nosso corpo!</p>
+          </div>
+          <div class="section-content text-center">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.2s"> <i class="fa" aria-hidden="true"><img
+                      src="images/repre-dopa.png" alt=""></i>
+                  <h5>Dopamina
+                  </h5>
+                  <p>A Dopamina conhecida como "o hormônio do prazer" vicia nas redes sociais porque gera essa sensação
+                    de prazer ao receber curtidas e notificações, criando um ciclo de recompensa.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.4s"> <i class="fa" aria-hidden="true"><img
+                      src="images/repre-sero.png" alt=""></i>
+                  <h5>Serotonina</h5>
+                  <p>Quando recebemos curtidas e comentários positivos, a serotonina aumenta, gerando uma sensação de
+                    felicidade e pertencimento. Isso reforça o desejo de continuar postando e interagindo.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.6s"> <i class="fa" aria-hidden="true"><img
+                      src="images/repre-corti.png" alt="" id="repre-cortii"></i>
+                  <h5>Cortisol</h5>
+                  <p>Quando ficamos muito tempo sem checar as redes, o cortisol aumenta, causando ansiedade e uma
+                    necessidade urgente de voltar ao celular para aliviar esse desconforto.</p>
+                </div>
+              </div>
+              <div class="texto-3d" data-condicoes='{"x": 1.57, "y": 0, "z": 0}'>
+                Este texto aparece quando X está perto de 1.57 (90 graus)
+            </div>
+            
+            <div class="texto-3d" data-condicoes='{"y": 3.14}'>
+                Este texto aparece quando Y está perto de 3.14 (180 graus)
+            </div>
+            </div>
+            <a href="#" class="about-btn">Saiba Mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="progress-bar" id="progressBar"></div>
+
+
+  <section class="section">
+    <div class="hormonios-text">
+      <h1>Dopamina</h1>
+      <p>A Dopamina conhecida como "o hormônio do prazer" vicia nas redes sociais porque gera essa sensação de prazer
+        ao receber curtidas e notificações, criando um ciclo de recompensa. </p>
+    </div>
+    <div class="hormonios-text">
+      <h1>Serotonina</h1>
+      <p>Quando recebemos curtidas e comentários positivos, a serotonina aumenta, gerando uma sensação de felicidade
+        e pertencimento. Isso reforça o desejo de continuar postando e interagindo.
+      </p>
+    </div>
+    <div class="sticky-container">
+
+
+      <div class="scene" id="brainContainer"></div>
+
+    </div>
+    <div class="hormonios-text" id="hormo-3">
+      <h1>Cortisol</h1>
+      <p>Quando ficamos muito tempo sem checar as redes, o cortisol aumenta, causando ansiedade e uma necessidade
+        urgente de voltar ao celular para aliviar esse desconforto. </p>
+    </div>
+  </section>
+
+
+
+
+  <!-------Features Start------->
+  <section class="feature section-padding" data-scroll-index='3'>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center">
+            <h3>Nosso App</h3>
+            <span class="line"></span>
+            <p>Entenda agora o porque Calmind é tão especial e como ele vai melhorar TODOS os aspectos da sua vida!</p>
+          </div>
+          <div class="section-content text-center">
+            <div class="row">
+              <div class="col-md-4 col-sm-12">
+                <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
+                  <div class="media-body text-right media-right-margin">
+                    <h5>Desafios</h5>
+                    <p>Conclua desafios de desintoxicação das redes sociais e de metas de exercício físico e ganhe
+                      CalCoins.</p>
+                  </div>
+                  <div class="media-right icon-border"> <span class="fa fa-bolt" aria-hidden="true"></span> </div>
+                </div>
+                <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
+                  <div class="media-body text-right media-right-margin">
+                    <h5>Recompensas</h5>
+                    <p>Ao concluir desafios você ganha CalCoins, troque elas por cursos e até mesmo por gift-cards.</p>
+                  </div>
+                  <div class="media-right icon-border"> <span class="fa fa-gift" aria-hidden="true"></span> </div>
+                </div>
+                <div class="media single-feature wow fadeInUp" data-wow-delay="0.6s">
+                  <div class="media-body text-right media-right-margin">
+                    <h5>Cursos</h5>
+                    <p>Escolha um de nossos cursos para começar e melhorar sua saúde mental cada vez mais.</p>
+                  </div>
+                  <div class="media-right icon-border"> <span class="fa fa-graduation-cap" aria-hidden="true"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 d-none d-md-block d-lg-block">
+                <div class="feature-mobile"> <img src="images/celular-app.png"
+                    class="img-fluid wow fadeInUp" /> </div>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
+                  <div class="media-left icon-border media-right-margin"> <span class="fa fa-users"
+                      aria-hidden="true"></span> </div>
+                  <div class="media-body text-left">
+                    <h5>Competição</h5>
+                    <p>Chame seus amigos para uma competição de quem conclui mais desafios!</p>
+                  </div>
+                </div>
+                <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
+                  <div class="media-left icon-border media-right-margin"> <span class="fa fa-trophy"
+                      aria-hidden="true"></span> </div>
+                  <div class="media-body text-left">
+                    <h5>Ranking</h5>
+                    <p>Adicione seus amigos e veja quem está mais dedicado aos desafios.</p>
+                  </div>
+                </div>
+                <div class="media single-feature wow fadeInUp" data-wow-delay="0.6s">
+                  <div class="media-left icon-border media-right-margin"> <span class="fa fa-question"
+                      aria-hidden="true"></span> </div>
+                  <div class="media-body text-left">
+                    <h5>Caixa Misteriosa</h5>
+                    <p>Você pode comprar caixas misteriosas com itens de desenvolvimento pessoal e foco.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-------Features End------->
+
+  <!-------Download End------->
+  <section class="download section-padding" data-scroll-index="4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center white">
+            <h3>Download Calmind</h3>
+            <span class="line"></span>
+            <p class="white">Clique no botão abaixo e baixe AGORA Calmind e fique com a sua saúde mental em dia!</p>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="section-content text-center">
+            <ul>
+              <li><a href="#"><img src="images/playstore.png" class="wow fadeInUp" data-wow-delay="0.7s" /></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-------Download End------->
+
+  <footer class="footer-copy">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <p>2025 &copy; Calmind. Site desenvolvido por <a href="http://w3Template.com" target="_blank"
+              rel="dofollow">Giovani C. Luvizuto</a> e <a href="http://w3Template.com" target="_blank"
+              rel="dofollow">Matheus Wiezel Medeiros</a</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <!-- scrollIt js -->
+  <script src="js/scrollIt.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    wow = new WOW();
+    wow.init();
+    $(document).ready(function (e) {
+
+      $('#video-icon').on('click', function (e) {
+        e.preventDefault();
+        $('.video-popup').css('display', 'flex');
+        $('.iframe-src').slideDown();
+      });
+      $('.video-popup').on('click', function (e) {
+        var $target = e.target.nodeName;
+        var video_src = $(this).find('iframe').attr('src');
+        if ($target != 'IFRAME') {
+          $('.video-popup').fadeOut();
+          $('.iframe-src').slideUp();
+          $('.video-popup iframe').attr('src', " ");
+          $('.video-popup iframe').attr('src', video_src);
+        }
+      });
+
+      $('.slider').bxSlider({
+        pager: false
+      });
+    });
+
+    $(window).on("scroll", function () {
+
+      var bodyScroll = $(window).scrollTop(),
+        navbar = $(".navbar");
+
+      if (bodyScroll > 50) {
+        $('.navbar-logo img').attr('src', 'images/logo-black.png');
+        navbar.addClass("nav-scroll");
+
+      } else {
+        $('.navbar-logo img').attr('src', 'images/logo.png');
+        navbar.removeClass("nav-scroll");
+      }
+
+    });
+    $(window).on("load", function () {
+      var bodyScroll = $(window).scrollTop(),
+        navbar = $(".navbar");
+
+      if (bodyScroll > 50) {
+        $('.navbar-logo img').attr('src', 'images/logo-black.png');
+        navbar.addClass("nav-scroll");
+      } else {
+        $('.navbar-logo img').attr('src', 'images/logo-white.png');
+        navbar.removeClass("nav-scroll");
+      }
+
+      $.scrollIt({
+
+        easing: 'swing',      // the easing function for animation
+        scrollTime: 900,       // how long (in ms) the animation takes
+        activeClass: 'active', // class given to the active nav element
+        onPageChange: null,    // function(pageIndex) that is called when page is changed
+        topOffset: -63
+      });
+    });
+
+
+
+
+
+    // Configuração do Three.js
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: false });
+    renderer.setSize(700, 350);
+    document.getElementById('brainContainer').appendChild(renderer.domElement);
+
+    const light = new THREE.DirectionalLight(0xffffff, 1);
+    light.position.set(2, 1, 3);
+    scene.add(light);
+
+    const loader = new THREE.GLTFLoader();
+    let brain;
+    loader.load('celebro.glb', function (gltf) {
+      brain = gltf.scene;
+      brain.scale.set(0.7, 0.7, 0.7);
+      scene.add(brain);
+      animate();
+    });
+
+    camera.position.z = 4;
+
+    function animate() {
+      requestAnimationFrame(animate);
+      renderer.render(scene, camera);
+    }
+    setTimeout(() => {
+      window.addEventListener('scroll', () => {
+        const scrollHeight = document.body.scrollHeight - window.innerHeight;
+        const scrolled = window.pageYOffset;
+        const scrollPercentage = (scrolled / scrollHeight) * 3050;
+        document.getElementById('progressBar').style.width = `${scrollPercentage}%`;
+        if (brain) {
+          brain.rotation.y = scrollPercentage * 0.1;
+          brain.rotation.x = Math.sin(scrollPercentage * 0.05) * 0.5;
+        }
+      });
+    }, 1000);
+
+
+
+
+
+
+
+
+
+
+
+    // Supondo que você está usando Three.js para o modelo 3D
+// Se estiver usando outra biblioteca, o conceito é similar
+
+// Variáveis para armazenar a posição atual do modelo
+let brain;
+let divsTexto = [];
+
+// Configuração inicial
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleciona todas as divs de texto
+    divsTexto = document.querySelectorAll('.texto-3d');
+    
+    // Inicialmente oculta todas as divs
+    divsTexto.forEach(div => {
+        div.style.opacity = '0';
+        div.style.pointerEvents = 'none';
+        div.style.transition = 'opacity 0.5s ease';
+    });
+    
+    // Configura seu modelo 3D (exemplo com Three.js)
+    // modelo3D = ... sua configuração do modelo 3D
+    
+    // Chama a função de verificação a cada frame
+    requestAnimationFrame(verificarRotacao);
+});
+
+function verificarRotacao() {
+    // Obtém a rotação atual do modelo
+    const rotacao = modelo3D.rotation;
+    const x = rotacao.x;
+    const y = rotacao.y;
+    const z = rotacao.z;
+    
+    // Verifica cada div e suas condições de aparecimento
+    divsTexto.forEach(div => {
+        const condicoes = JSON.parse(div.dataset.condicoes || '{}');
+        
+        // Verifica se a rotação atual está dentro dos limites especificados
+        const xOk = !condicoes.x || (Math.abs(x - condicoes.x) < 0.1);
+        const yOk = !condicoes.y || (Math.abs(y - condicoes.y) < 0.1);
+        const zOk = !condicoes.z || (Math.abs(z - condicoes.z) < 0.1);
+        
+        // Mostra ou oculta a div conforme as condições
+        if (xOk && yOk && zOk) {
+            div.style.opacity = '1';
+            div.style.pointerEvents = 'auto';
+        } else {
+            div.style.opacity = '0';
+            div.style.pointerEvents = 'none';
+        }
+    });
+    
+    // Continua o loop
+    requestAnimationFrame(verificarRotacao);
+}
+
+
+
+// Exemplo com ScrollMagic
+const controller = new ScrollMagic.Controller();
+
+new ScrollMagic.Scene({
+    triggerElement: "#seu-modelo-container",
+    duration: "100%"
+})
+.on("progress", function(e) {
+    // Atualiza a rotação do modelo baseado no scroll
+    modelo3D.rotation.y = e.progress * Math.PI * 2;
+    
+    // Chama nossa função de verificação
+    verificarRotacao();
+})
+.addTo(controller);
+  </script>
+</body>
+
+</html>
