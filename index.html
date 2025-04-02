@@ -57,7 +57,7 @@
     .hormonios-text {
       height: 300px;
       width: 400px;
-      margin: 100px 100px 0px 150px;
+      margin: 100px 30px 0px 60px;
       text-align: center;
       display: inline-block;
     }
@@ -65,6 +65,29 @@
 
     .hormonios-text:first-child {
       margin-right: 250px;
+    }
+
+
+
+
+    .paragraph {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.5s, transform 0.5s;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .paragraph.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -105,8 +128,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-md-4 col-sm-12"> <img src="images/celular-app.png"
-              class="img-fluid wow fadeInUp" /> </div>
+          <div class="col-md-4 col-sm-12"> <img src="images/celular-app.png" class="img-fluid wow fadeInUp" /> </div>
         </div>
       </div>
     </div>
@@ -200,14 +222,14 @@
                   <p>Quando ficamos muito tempo sem checar as redes, o cortisol aumenta, causando ansiedade e uma
                     necessidade urgente de voltar ao celular para aliviar esse desconforto.</p>
                 </div>
-              </div>
+              </div>*--------------------------------------------------------------------------------------------------------------------------;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
               <div class="texto-3d" data-condicoes='{"x": 1.57, "y": 0, "z": 0}'>
                 Este texto aparece quando X está perto de 1.57 (90 graus)
-            </div>
-            
-            <div class="texto-3d" data-condicoes='{"y": 3.14}'>
+              </div>
+
+              <div class="texto-3d" data-condicoes='{"y": 3.14}'>
                 Este texto aparece quando Y está perto de 3.14 (180 graus)
-            </div>
+              </div>
             </div>
             <a href="#" class="about-btn">Saiba Mais</a>
           </div>
@@ -222,16 +244,20 @@
 
   <section class="section">
     <div class="hormonios-text">
-      <h1>Dopamina</h1>
-      <p>A Dopamina conhecida como "o hormônio do prazer" vicia nas redes sociais porque gera essa sensação de prazer
-        ao receber curtidas e notificações, criando um ciclo de recompensa. </p>
+        <p  class="paragraph" id="paragraph1">A Dopamina conhecida como "o hormônio do prazer" vicia nas redes sociais porque gera essa sensação de prazer
+          ao receber curtidas e notificações, criando um ciclo de recompensa. </p>
     </div>
     <div class="hormonios-text">
-      <h1>Serotonina</h1>
-      <p>Quando recebemos curtidas e comentários positivos, a serotonina aumenta, gerando uma sensação de felicidade
-        e pertencimento. Isso reforça o desejo de continuar postando e interagindo.
-      </p>
+        <p  class="paragraph" id="paragraph2">Quando recebemos curtidas e comentários positivos, a serotonina aumenta, gerando uma sensação de felicidade
+          e pertencimento. Isso reforça o desejo de continuar postando e interagindo.
+        </p>
     </div>
+
+    <div class="scroll-hint">Role para baixo ↓</div>
+
+
+
+
     <div class="sticky-container">
 
 
@@ -286,8 +312,7 @@
                 </div>
               </div>
               <div class="col-md-4 d-none d-md-block d-lg-block">
-                <div class="feature-mobile"> <img src="images/celular-app.png"
-                    class="img-fluid wow fadeInUp" /> </div>
+                <div class="feature-mobile"> <img src="images/celular-app.png" class="img-fluid wow fadeInUp" /> </div>
               </div>
               <div class="col-md-4 col-sm-12">
                 <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
@@ -457,6 +482,57 @@
 
     camera.position.z = 4;
 
+
+
+
+
+
+    // Variáveis de controle
+    let targetRotation = 0;
+    const paragraph1 = document.getElementById('paragraph1');
+    const paragraph2 = document.getElementById('paragraph2');
+    let scrollPercentage = 0;
+
+    // Configurações de quando os parágrafos aparecem (em % do scroll total)
+    const paragraph1AppearAt = 0.25; // 25% do scroll
+    const paragraph1HideAt = 0.6;    // 60% do scroll (quando o parágrafo 1 aparece)
+    const paragraph2AppearAt = 0.6;  // 60% do scroll
+    const paragraph2HideAt = 0.9;    // 60% do scroll (quando o parágrafo 2 aparece)
+    const paragraph3AppearAt = 0.9;  // 60% do scroll
+    const paragraph3HideAt = 1.2;    // 60% do scroll (quando o parágrafo 3 aparece)
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const scrollHeight = document.body.scrollHeight - window.innerHeight;
+      scrollPercentage = scrollY / scrollHeight;
+
+      // Controla a rotação do objeto
+      targetRotation = scrollPercentage * Math.PI * 4; // 2 rotações completas
+
+      // Mostra/oculta parágrafos conforme a posição do scroll
+      if (scrollPercentage >= paragraph1AppearAt && scrollPercentage < paragraph1HideAt) {
+        paragraph1.classList.add('visible');
+      } else {
+        paragraph1.classList.remove('visible');
+      }
+
+      if (scrollPercentage >= paragraph2AppearAt) {
+        paragraph2.classList.add('visible');
+        // Garante que o parágrafo 1 fica oculto quando o 2 aparece
+        paragraph1.classList.remove('visible');
+      } else {
+        paragraph2.classList.remove('visible');
+      }
+    });
+
+
+
+
+
+
+
+
+
     function animate() {
       requestAnimationFrame(animate);
       renderer.render(scene, camera);
@@ -477,86 +553,6 @@
 
 
 
-
-
-
-
-
-
-
-    // Supondo que você está usando Three.js para o modelo 3D
-// Se estiver usando outra biblioteca, o conceito é similar
-
-// Variáveis para armazenar a posição atual do modelo
-let brain;
-let divsTexto = [];
-
-// Configuração inicial
-document.addEventListener('DOMContentLoaded', function() {
-    // Seleciona todas as divs de texto
-    divsTexto = document.querySelectorAll('.texto-3d');
-    
-    // Inicialmente oculta todas as divs
-    divsTexto.forEach(div => {
-        div.style.opacity = '0';
-        div.style.pointerEvents = 'none';
-        div.style.transition = 'opacity 0.5s ease';
-    });
-    
-    // Configura seu modelo 3D (exemplo com Three.js)
-    // modelo3D = ... sua configuração do modelo 3D
-    
-    // Chama a função de verificação a cada frame
-    requestAnimationFrame(verificarRotacao);
-});
-
-function verificarRotacao() {
-    // Obtém a rotação atual do modelo
-    const rotacao = modelo3D.rotation;
-    const x = rotacao.x;
-    const y = rotacao.y;
-    const z = rotacao.z;
-    
-    // Verifica cada div e suas condições de aparecimento
-    divsTexto.forEach(div => {
-        const condicoes = JSON.parse(div.dataset.condicoes || '{}');
-        
-        // Verifica se a rotação atual está dentro dos limites especificados
-        const xOk = !condicoes.x || (Math.abs(x - condicoes.x) < 0.1);
-        const yOk = !condicoes.y || (Math.abs(y - condicoes.y) < 0.1);
-        const zOk = !condicoes.z || (Math.abs(z - condicoes.z) < 0.1);
-        
-        // Mostra ou oculta a div conforme as condições
-        if (xOk && yOk && zOk) {
-            div.style.opacity = '1';
-            div.style.pointerEvents = 'auto';
-        } else {
-            div.style.opacity = '0';
-            div.style.pointerEvents = 'none';
-        }
-    });
-    
-    // Continua o loop
-    requestAnimationFrame(verificarRotacao);
-}
-
-
-
-// Exemplo com ScrollMagic
-const controller = new ScrollMagic.Controller();
-
-new ScrollMagic.Scene({
-    triggerElement: "#seu-modelo-container",
-    duration: "100%"
-})
-.on("progress", function(e) {
-    // Atualiza a rotação do modelo baseado no scroll
-    modelo3D.rotation.y = e.progress * Math.PI * 2;
-    
-    // Chama nossa função de verificação
-    verificarRotacao();
-})
-.addTo(controller);
   </script>
 </body>
 
