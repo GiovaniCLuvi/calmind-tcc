@@ -71,14 +71,14 @@ h6 {
 	display: none;
 }
 .nav-scroll {
-	background: #fff;
+	background: #020e48;
 	-webkit-box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.0509803922);
 	box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.0509803922);
 	-webkit-transition: all .4s ease;
 	transition: all .4s ease;
 }
 .nav-scroll .navbar-nav > li > a {
-	color: #333;
+	color: #ffffff;
 }
 .nav-scroll .navbar-brand img {
 	-webkit-transform: scale(1.03) !important;
@@ -149,6 +149,7 @@ h6 {
 	position:relative
 }
 .section-padding {
+	margin-top: 7%;
 	padding:80px 0px;
 }
 .sectioner-header {

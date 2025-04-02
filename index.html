@@ -6,90 +6,107 @@
   <title>Calmind</title>
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
-    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-  <!-- Font Google -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
-  <style>
-    body {
-      background-color: #0f0f0f;
-      color: #ffffff;
-      overflow-x: hidden;
-    }
+  <linl rel="stylesheet" href="./css/responsive.css" <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+    <style>
+      body {
+        background-color: black;
+        color: #ffffff;
+        overflow-x: hidden;
+      }
 
-    .section {
-      height: 100vh;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      background-color: red;
-    }
+      .section {
+        height: 75vh;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
 
-    .sticky-container {
-      position: sticky;
-      background-color: blue;
-      top: 0;
-      height: 40vh;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
+      .sticky-container {
+        position: sticky;
+        top: 0;
+        height: 40vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
 
-    .scene {
-      width: 700px;
-      background-color: rgb(211, 12, 218);
-      height: 700px;
-      display: flex;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hormonios-text {
-      height: 300px;
-      width: 400px;
-      margin: 100px 30px 0px 60px;
-      text-align: center;
-      display: inline-block;
-    }
+      .scene {
+        margin-top: 240px;
+        width: 500px;
+        height: 500px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
 
 
-    .hormonios-text:first-child {
-      margin-right: 250px;
-    }
+      .hormonios-text {
+        height: 300px;
+        width: 400px;
+        text-align: center;
+        display: inline-block;
+        
+      }
+
+      .hormonios-text:first-child {
+       margin-left: 13%;
+       margin-bottom: -240px;
+      }
+
+
+      #paragrafo2{
+        margin-right: 30%;
+      }
+
+      #paragrafo2, #paragrafo3 {
+        margin-top: 80px;
+      }
+
+      .hormonios-text:first-child {
+        margin-right: 250px;
+      }
 
 
 
 
-    .paragraph {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-      box-sizing: border-box;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 0.5s, transform 0.5s;
-      max-width: 600px;
-      margin: 0 auto;
-    }
+      .paragraph {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s, transform 0.5s;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
 
-    .paragraph.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+      .paragraph.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .titulo {
+        font-size: 40px;
+      }
+    </style>
 </head>
 
 <body>
@@ -145,7 +162,7 @@
           <div class="sectioner-header text-center">
             <h3>Vício</h3>
             <span class="line"></span>
-            <p>Você ja parou pra pensar o porque as redes sociais são viciantes e te prendem tanto? Entenda agora os
+            <p>Você já parou pra pensar o porque as redes sociais são viciantes e te prendem tanto? Entenda agora os
               responsáveis por esse vício e como eles agem em nosso corpo!</p>
           </div>
           <div class="section-content text-center">
@@ -222,14 +239,8 @@
                   <p>Quando ficamos muito tempo sem checar as redes, o cortisol aumenta, causando ansiedade e uma
                     necessidade urgente de voltar ao celular para aliviar esse desconforto.</p>
                 </div>
-              </div>*--------------------------------------------------------------------------------------------------------------------------;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-              <div class="texto-3d" data-condicoes='{"x": 1.57, "y": 0, "z": 0}'>
-                Este texto aparece quando X está perto de 1.57 (90 graus)
               </div>
 
-              <div class="texto-3d" data-condicoes='{"y": 3.14}'>
-                Este texto aparece quando Y está perto de 3.14 (180 graus)
-              </div>
             </div>
             <a href="#" class="about-btn">Saiba Mais</a>
           </div>
@@ -241,35 +252,43 @@
 
   <div class="progress-bar" id="progressBar"></div>
 
-
+  
   <section class="section">
-    <div class="hormonios-text">
-        <p  class="paragraph" id="paragraph1">A Dopamina conhecida como "o hormônio do prazer" vicia nas redes sociais porque gera essa sensação de prazer
-          ao receber curtidas e notificações, criando um ciclo de recompensa. </p>
+
+    <div class="hormonios-text" id="paragrafo1">
+      <p class="paragraph" id="paragraph1"> <span class="titulo">Dopamina</span> A Dopamina conhecida como "o hormônio do prazer" vicia nas redes sociais
+        porque gera essa sensação de prazer
+        ao receber curtidas e notificações, criando um ciclo de recompensa. </p>
     </div>
-    <div class="hormonios-text">
-        <p  class="paragraph" id="paragraph2">Quando recebemos curtidas e comentários positivos, a serotonina aumenta, gerando uma sensação de felicidade
-          e pertencimento. Isso reforça o desejo de continuar postando e interagindo.
-        </p>
+    <div class="hormonios-text" id="paragrafo2">
+      <p class="paragraph" id="paragraph2"> <span class="titulo">Melatonina</span> A luz azul das telas inibe a produção de melatonina, dificultando o sono e afetando o ciclo circadiano. </p>
     </div>
-
-    <div class="scroll-hint">Role para baixo ↓</div>
-
-
-
-
+    <div class="hormonios-text" id="paragrafo3">
+      <p class="paragraph" id="paragraph3"> <span class="titulo">Ocitocina</span>Chamadas de vídeo, interações sociais online e mensagens afetuosas podem aumentar a ocitocina, fortalecendo conexões emocionais. </p>
+    </div>
     <div class="sticky-container">
 
 
       <div class="scene" id="brainContainer"></div>
 
     </div>
-    <div class="hormonios-text" id="hormo-3">
-      <h1>Cortisol</h1>
-      <p>Quando ficamos muito tempo sem checar as redes, o cortisol aumenta, causando ansiedade e uma necessidade
-        urgente de voltar ao celular para aliviar esse desconforto. </p>
+    <div class="hormonios-text">
+      <p class="paragraph" id="paragraph4"> <span class="titulo">Serotonina</span> Quando recebemos curtidas e comentários positivos, a serotonina aumenta,
+        gerando uma sensação de felicidade
+        e pertencimento. Isso reforça o desejo de continuar postando e interagindo.
+      </p>
     </div>
-  </section>
+    <div class="hormonios-text">
+      <p class="paragraph" id="paragraph5"> <span class="titulo">Cortisol</span> Quando ficamos muito tempo sem checar as redes, o cortisol aumenta, causando ansiedade e uma necessidade
+        urgente de voltar ao celular para aliviar esse desconforto.
+      </p>
+    </div>
+
+
+
+
+
+    
 
 
 
@@ -376,9 +395,9 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <p>2025 &copy; Calmind. Site desenvolvido por <a href="http://w3Template.com" target="_blank"
-              rel="dofollow">Giovani C. Luvizuto</a> e <a href="http://w3Template.com" target="_blank"
-              rel="dofollow">Matheus Wiezel Medeiros</a</p>
+          <p>2025 &copy; Calmind. Site desenvolvido por <a  target="_blank"
+              rel="dofollow">Giovani C. Luvizuto</a> e <a target="_blank"
+              rel="dofollow">Matheus Wiezel Medeiros</a> </p>
         </div>
       </div>
     </div>
@@ -394,6 +413,7 @@
   <script src="js/scrollIt.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script>
+
     wow = new WOW();
     wow.init();
     $(document).ready(function (e) {
@@ -425,7 +445,7 @@
         navbar = $(".navbar");
 
       if (bodyScroll > 50) {
-        $('.navbar-logo img').attr('src', 'images/logo-black.png');
+        $('.navbar-logo img').attr('src', 'images/logo.png');
         navbar.addClass("nav-scroll");
 
       } else {
@@ -491,15 +511,20 @@
     let targetRotation = 0;
     const paragraph1 = document.getElementById('paragraph1');
     const paragraph2 = document.getElementById('paragraph2');
+    const paragraph3 = document.getElementById('paragraph3');
     let scrollPercentage = 0;
 
     // Configurações de quando os parágrafos aparecem (em % do scroll total)
-    const paragraph1AppearAt = 0.25; // 25% do scroll
-    const paragraph1HideAt = 0.6;    // 60% do scroll (quando o parágrafo 1 aparece)
-    const paragraph2AppearAt = 0.6;  // 60% do scroll
-    const paragraph2HideAt = 0.9;    // 60% do scroll (quando o parágrafo 2 aparece)
-    const paragraph3AppearAt = 0.9;  // 60% do scroll
-    const paragraph3HideAt = 1.2;    // 60% do scroll (quando o parágrafo 3 aparece)
+    const paragraph1AppearAt = 0.45; // 25% do scroll
+    const paragraph1HideAt = 0.5;    // 60% do scroll (quando o parágrafo 1 aparece)
+    const paragraph2AppearAt = 0.5;  // 60% do scroll
+    const paragraph2HideAt = 0.55;    // 60% do scroll (quando o parágrafo 2 aparece)
+    const paragraph3AppearAt = 0.55;  // 60% do scroll
+    const paragraph3HideAt = 0.6;    // 60% do scroll (quando o parágrafo 3 aparece)
+    const paragraph4AppearAt = 0.6;  // 60% do scroll
+    const paragraph4HideAt = 0.65;    // 60% do scroll (quando o parágrafo 3 aparece)
+    const paragraph5AppearAt = 0.65;  // 60% do scroll
+    const paragraph5HideAt = 0.65;    // 60% do scroll (quando o parágrafo 3 aparece)
 
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
@@ -512,6 +537,16 @@
       // Mostra/oculta parágrafos conforme a posição do scroll
       if (scrollPercentage >= paragraph1AppearAt && scrollPercentage < paragraph1HideAt) {
         paragraph1.classList.add('visible');
+      window.addEventListener('scroll', () => {
+        const scrollHeight = document.body.scrollHeight - window.innerHeight;
+        const scrolled = window.pageYOffset;
+        const scrollPercentage = (scrolled / scrollHeight) * 450;
+        document.getElementById('progressBar').style.width = `${scrollPercentage}%`;
+        if (brain) {
+          brain.rotation.y = scrollPercentage * 0.1;
+          brain.rotation.x = Math.sin(scrollPercentage * 0.05) * 0.5;
+        }
+      });
       } else {
         paragraph1.classList.remove('visible');
       }
@@ -522,6 +557,27 @@
         paragraph1.classList.remove('visible');
       } else {
         paragraph2.classList.remove('visible');
+      }
+      if (scrollPercentage >= paragraph3AppearAt) {
+        paragraph3.classList.add('visible');
+        // Garante que o parágrafo 1 fica oculto quando o 2 aparece
+        paragraph2.classList.remove('visible');
+      } else {
+        paragraph3.classList.remove('visible');
+      }
+      if (scrollPercentage >= paragraph4AppearAt) {
+        paragraph4.classList.add('visible');
+        // Garante que o parágrafo 1 fica oculto quando o 2 aparece
+        paragraph3.classList.remove('visible');
+      } else {
+        paragraph4.classList.remove('visible');
+      }
+      if (scrollPercentage >= paragraph5AppearAt) {
+        paragraph5.classList.add('visible');
+        // Garante que o parágrafo 1 fica oculto quando o 2 aparece
+        paragraph4.classList.remove('visible');
+      } else {
+        paragraph5.classList.remove('visible');
       }
     });
 
@@ -537,18 +593,6 @@
       requestAnimationFrame(animate);
       renderer.render(scene, camera);
     }
-    setTimeout(() => {
-      window.addEventListener('scroll', () => {
-        const scrollHeight = document.body.scrollHeight - window.innerHeight;
-        const scrolled = window.pageYOffset;
-        const scrollPercentage = (scrolled / scrollHeight) * 3050;
-        document.getElementById('progressBar').style.width = `${scrollPercentage}%`;
-        if (brain) {
-          brain.rotation.y = scrollPercentage * 0.1;
-          brain.rotation.x = Math.sin(scrollPercentage * 0.05) * 0.5;
-        }
-      });
-    }, 1000);
 
 
 
