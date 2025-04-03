@@ -25,7 +25,7 @@
       }
 
       .section {
-        height: 75vh;
+        height: 95vh;
         justify-content: center;
         align-items: center;
         position: relative;
@@ -52,32 +52,29 @@
         justify-content: center;
       }
 
+      .testtt {
+        display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas com largura igual */
+            gap: 20px; /* Espaço entre as divs internas */
+            padding: 10px;
+        display: grid;
+      }
 
       .hormonios-text {
-        height: 300px;
         width: 400px;
         text-align: center;
-        display: inline-block;
-        
       }
 
       .hormonios-text:first-child {
-       margin-left: 13%;
-       margin-bottom: -240px;
+        margin-left: 80px;
+      }
+
+      #paragrafo2 {
+        margin-left: 20px;
       }
 
 
-      #paragrafo2{
-        margin-right: 30%;
-      }
 
-      #paragrafo2, #paragrafo3 {
-        margin-top: 80px;
-      }
-
-      .hormonios-text:first-child {
-        margin-right: 250px;
-      }
 
 
 
@@ -85,16 +82,10 @@
       .paragraph {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
         padding: 20px;
-        box-sizing: border-box;
         opacity: 0;
         transform: translateY(50px);
         transition: opacity 0.5s, transform 0.5s;
-        max-width: 600px;
-        margin: 0 auto;
       }
       
 
@@ -254,8 +245,8 @@
 
   
   <section class="section">
-
-    <div class="hormonios-text" id="paragrafo1">
+    <div class="testtt">
+    <div class="hormonios-text">
       <p class="paragraph" id="paragraph1"> <span class="titulo">Dopamina</span> A Dopamina conhecida como "o hormônio do prazer" vicia nas redes sociais
         porque gera essa sensação de prazer
         ao receber curtidas e notificações, criando um ciclo de recompensa. </p>
@@ -263,26 +254,30 @@
     <div class="hormonios-text" id="paragrafo2">
       <p class="paragraph" id="paragraph2"> <span class="titulo">Melatonina</span> A luz azul das telas inibe a produção de melatonina, dificultando o sono e afetando o ciclo circadiano. </p>
     </div>
-    <div class="hormonios-text" id="paragrafo3">
+    <div class="hormonios-text">
       <p class="paragraph" id="paragraph3"> <span class="titulo">Ocitocina</span>Chamadas de vídeo, interações sociais online e mensagens afetuosas podem aumentar a ocitocina, fortalecendo conexões emocionais. </p>
     </div>
+  </div>
     <div class="sticky-container">
 
 
       <div class="scene" id="brainContainer"></div>
 
     </div>
-    <div class="hormonios-text">
+    <div class="testtt">
+    <div class="hormonios-text" id="paragrafo4">
       <p class="paragraph" id="paragraph4"> <span class="titulo">Serotonina</span> Quando recebemos curtidas e comentários positivos, a serotonina aumenta,
         gerando uma sensação de felicidade
         e pertencimento. Isso reforça o desejo de continuar postando e interagindo.
       </p>
     </div>
-    <div class="hormonios-text">
+    <div></div>
+    <div class="hormonios-text" id="paragrafo">
       <p class="paragraph" id="paragraph5"> <span class="titulo">Cortisol</span> Quando ficamos muito tempo sem checar as redes, o cortisol aumenta, causando ansiedade e uma necessidade
         urgente de voltar ao celular para aliviar esse desconforto.
       </p>
     </div>
+  </div>
 
 
 
@@ -515,16 +510,16 @@
     let scrollPercentage = 0;
 
     // Configurações de quando os parágrafos aparecem (em % do scroll total)
-    const paragraph1AppearAt = 0.45; // 25% do scroll
-    const paragraph1HideAt = 0.5;    // 60% do scroll (quando o parágrafo 1 aparece)
-    const paragraph2AppearAt = 0.5;  // 60% do scroll
-    const paragraph2HideAt = 0.55;    // 60% do scroll (quando o parágrafo 2 aparece)
-    const paragraph3AppearAt = 0.55;  // 60% do scroll
-    const paragraph3HideAt = 0.6;    // 60% do scroll (quando o parágrafo 3 aparece)
-    const paragraph4AppearAt = 0.6;  // 60% do scroll
-    const paragraph4HideAt = 0.65;    // 60% do scroll (quando o parágrafo 3 aparece)
-    const paragraph5AppearAt = 0.65;  // 60% do scroll
-    const paragraph5HideAt = 0.65;    // 60% do scroll (quando o parágrafo 3 aparece)
+    const paragraph1AppearAt = 0.50; // 25% do scroll
+    const paragraph1HideAt = 0.53;    // 60% do scroll (quando o parágrafo 1 aparece)
+    const paragraph2AppearAt = 0.53;  // 60% do scroll
+    const paragraph2HideAt = 0.57;    // 60% do scroll (quando o parágrafo 2 aparece)
+    const paragraph3AppearAt = 0.57;  // 60% do scroll
+    const paragraph3HideAt = 0.62;    // 60% do scroll (quando o parágrafo 3 aparece)
+    const paragraph4AppearAt = 0.62;  // 60% do scroll
+    const paragraph4HideAt = 0.67;    // 60% do scroll (quando o parágrafo 3 aparece)
+    const paragraph5AppearAt = 0.67;  // 60% do scroll
+    const paragraph5HideAt = 0.67;    // 60% do scroll (quando o parágrafo 3 aparece)
 
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
